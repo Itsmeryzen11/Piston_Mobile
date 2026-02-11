@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piston Mobile</title>
+
+  <!-- Orbitron Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+
+      background: linear-gradient(-45deg, #380F17, #8F0B13, #F2A44C, #252B2B, #4C4F54);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    /* Logo */
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      padding: 40px 0 20px 0;
+    }
+
+    /* Game Section */
+    .games {
+      padding: 20px;
+    }
+
+    /* Red Desktop Style Boxes */
+    .game-box {
+      background: linear-gradient(145deg, #660F24, #2B0013);
+      margin: 20px 0;
+      padding: 35px;
+      border-radius: 18px;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 0 12px black;
+      transition: 0.2s ease;
+      position: relative;
+    }
+
+    /* Animated Red Border Glow */
+    .game-box::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: 18px;
+      background: linear-gradient(45deg, #FF94B2, #F24455, #E5203A);
+      background-size: 200%;
+      z-index: -1;
+      animation: borderGlow 3s linear infinite;
+    }
+
+    @keyframes borderGlow {
+      0% {background-position: 0%;}
+      100% {background-position: 200%;}
+    }
+
+    .game-box:active {
+      transform: scale(0.97);
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="logo">PISTON</div>
+
+  <div class="games">
+    <div class="game-box">Game Coming Soon</div>
+    <div class="game-box">Game Coming Soon</div>
+    <div class="game-box">Game Coming Soon</div>
+  </div>
+
+  <div class="footer">
+    © 2026 Piston
+  </div>
+
+</body>
+</html>
